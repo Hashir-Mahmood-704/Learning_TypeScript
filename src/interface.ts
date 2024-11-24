@@ -42,5 +42,24 @@ const emp1: Employee = {
 
 // hum1.speak("Live!");
 // emp1.speak("Kill!")
+
 // this is how we call a method which is optional
 emp1.sayHello?.();
+
+interface CarInterface {
+    doors: number;
+    seats: number;
+}
+
+const myCar: CarInterface = {
+    doors: 4,
+    seats: 5,
+};
+
+// keyof is used to tell typescript that param can be only a key of CarInterface
+function getCarValues(key: keyof CarInterface): number {
+    return myCar[key];
+}
+
+console.log(getCarValues("doors"));
+console.log(getCarValues("seats"));

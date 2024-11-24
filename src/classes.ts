@@ -108,7 +108,7 @@ class Teacher implements TeacherInterface {
         this.teacherName = name;
         this.teacherSubject = subject;
     }
-}
+} 
 
 class TeacherAssistant extends Teacher implements TeacherAssistantInterface {
     readonly isGraduated: boolean;
